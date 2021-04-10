@@ -1,0 +1,8 @@
+.cache/
+.local/
+.kitchen/
+Gemfile.lock
+.bundle/
+.terraform/
+terraform.tfstate.d/
+Gemfile.lock
