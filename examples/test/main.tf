@@ -1,11 +1,10 @@
 module "this" {
   source = "../../"
 
-  # aliases          = ["cdn.sandboxs.net"]
   domain_name      = module.s3-bucket.values.bucket_regional_domain_name
   origin_id        = module.s3-bucket.values.id
   target_origin_id = module.s3-bucket.values.id
-  
+
   tags = {
     Project = "titan"
   }
