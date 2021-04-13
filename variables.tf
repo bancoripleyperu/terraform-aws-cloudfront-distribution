@@ -131,3 +131,21 @@ variable "origin_access_identity" {
   type        = string
   default     = null
 }
+
+variable "min_ttl" {
+  description = "(Optional) The min ttl cache."
+  type        = number
+  default     = 0
+}
+
+variable "default_ttl" {
+  description = "(Optional) The default ttl cache."
+  type        = number
+  default     = 3600
+}
+
+variable "max_ttl" {
+  description = "(Optional) The max ttl cache."
+  type        = number
+  default     = 86400
+}

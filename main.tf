@@ -21,6 +21,9 @@ resource "aws_cloudfront_distribution" "this" {
     viewer_protocol_policy = var.viewer_protocol_policy
     allowed_methods        = var.allowed_methods
     cached_methods         = var.cached_methods
+    min_ttl                = var.min_ttl
+    default_ttl            = var.default_ttl
+    max_ttl                = var.max_ttl
 
     forwarded_values {
       query_string = var.query_string

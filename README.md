@@ -45,12 +45,15 @@ No modules.
 | <a name="input_compress"></a> [compress](#input\_compress) | Compress. | `bool` | `false` | no |
 | <a name="input_custom_error_response"></a> [custom\_error\_response](#input\_custom\_error\_response) | (Optional) List of custom error response configurations for cloudFront distribution. | <pre>set(object({<br>    error_code            = number<br>    response_code         = number<br>    response_page_path    = string<br>    error_caching_min_ttl = number<br>  }))</pre> | `[]` | no |
 | <a name="input_default_root_object"></a> [default\_root\_object](#input\_default\_root\_object) | Default root object. | `string` | `"index.html"` | no |
+| <a name="input_default_ttl"></a> [default\_ttl](#input\_default\_ttl) | (Optional) The default ttl cache. | `number` | `3600` | no |
 | <a name="input_domain_name"></a> [domain\_name](#input\_domain\_name) | Origin domain name. | `string` | n/a | yes |
 | <a name="input_enabled"></a> [enabled](#input\_enabled) | Enabled distribution | `bool` | `true` | no |
 | <a name="input_forward"></a> [forward](#input\_forward) | Cookies forward. | `string` | `"none"` | no |
 | <a name="input_http_version"></a> [http\_version](#input\_http\_version) | Http version. | `string` | `"http2"` | no |
 | <a name="input_is_ipv6_enabled"></a> [is\_ipv6\_enabled](#input\_is\_ipv6\_enabled) | Enabled ipv6. | `bool` | `false` | no |
 | <a name="input_lambda_function_association"></a> [lambda\_function\_association](#input\_lambda\_function\_association) | (Optional) A mapping containing lambda function association. | <pre>list(object({<br>    event_type   = string<br>    include_body = bool<br>    lambda_arn   = string<br>  }))</pre> | `[]` | no |
+| <a name="input_max_ttl"></a> [max\_ttl](#input\_max\_ttl) | (Optional) The max ttl cache. | `number` | `86400` | no |
+| <a name="input_min_ttl"></a> [min\_ttl](#input\_min\_ttl) | (Optional) The min ttl cache. | `number` | `0` | no |
 | <a name="input_origin_access_identity"></a> [origin\_access\_identity](#input\_origin\_access\_identity) | (Optional) The origin access identity. | `string` | `null` | no |
 | <a name="input_origin_id"></a> [origin\_id](#input\_origin\_id) | Origin id. | `string` | n/a | yes |
 | <a name="input_price_class"></a> [price\_class](#input\_price\_class) | Price class of the distribution. | `string` | `"PriceClass_100"` | no |
