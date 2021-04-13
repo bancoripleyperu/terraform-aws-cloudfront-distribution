@@ -113,10 +113,10 @@ variable "tags" {
 
 variable "lambda_function_association" {
   description = "(Optional) Lambda function association."
-  type        = list(object({
+  type = list(object({
     event_type   = string
     include_body = bool
     lambda_arn   = string
   }))
-  default     = []
+  default = []
 }
