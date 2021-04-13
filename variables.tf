@@ -125,3 +125,9 @@ variable "lambda_function_association" {
   }))
   default = []
 }
+
+variable "origin_access_identity" {
+  description = "(Optional) The origin access identity."
+  type        = string
+  default     = null
+}
