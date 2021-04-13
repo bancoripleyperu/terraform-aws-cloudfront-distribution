@@ -51,6 +51,7 @@ No modules.
 | <a name="input_http_version"></a> [http\_version](#input\_http\_version) | Http version. | `string` | `"http2"` | no |
 | <a name="input_is_ipv6_enabled"></a> [is\_ipv6\_enabled](#input\_is\_ipv6\_enabled) | Enabled ipv6. | `bool` | `false` | no |
 | <a name="input_lambda_function_association"></a> [lambda\_function\_association](#input\_lambda\_function\_association) | (Optional) A mapping containing lambda function association. | <pre>list(object({<br>    event_type   = string<br>    include_body = bool<br>    lambda_arn   = string<br>  }))</pre> | `[]` | no |
+| <a name="input_origin_access_identity"></a> [origin\_access\_identity](#input\_origin\_access\_identity) | (Optional) The origin access identity. | `string` | `null` | no |
 | <a name="input_origin_id"></a> [origin\_id](#input\_origin\_id) | Origin id. | `string` | n/a | yes |
 | <a name="input_price_class"></a> [price\_class](#input\_price\_class) | Price class of the distribution. | `string` | `"PriceClass_100"` | no |
 | <a name="input_query_string"></a> [query\_string](#input\_query\_string) | Query string. | `bool` | `false` | no |

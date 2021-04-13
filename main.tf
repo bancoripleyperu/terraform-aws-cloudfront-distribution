@@ -2,6 +2,13 @@ resource "aws_cloudfront_distribution" "this" {
   origin {
     domain_name = var.domain_name
     origin_id   = var.origin_id
+
+    dynamic "s3_origin_config" {
+      for_each = var.origin_access_identity == null ? [] : [1]
+      content {
+        origin_access_identity = var.origin_access_identity
+      }
+    }
   }
 
   aliases             = var.aliases
