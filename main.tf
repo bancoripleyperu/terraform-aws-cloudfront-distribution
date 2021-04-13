@@ -19,11 +19,21 @@ resource "aws_cloudfront_distribution" "this" {
       query_string = var.query_string
 
       cookies {
-        forward = var.cookies_forward
+        forward = var.forward
       }
     }
+
     smooth_streaming = var.smooth_streaming
     compress         = var.compress
+
+    dynamic "lambda_function_association" {
+      for_each = var.lambda_function_association
+      content {
+        event_type   = lookup(lambda_function_association.value, "event_type", null)
+        include_body = lookup(lambda_function_association.value, "include_body", null)
+        lambda_arn   = lookup(lambda_function_association.value, "lambda_arn", null)
+      }
+    }
   }
 
   price_class  = var.price_class
