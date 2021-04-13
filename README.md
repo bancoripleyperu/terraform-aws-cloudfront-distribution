@@ -43,13 +43,14 @@ No modules.
 | <a name="input_allowed_methods"></a> [allowed\_methods](#input\_allowed\_methods) | Allowed methods. | `list(string)` | <pre>[<br>  "DELETE",<br>  "GET",<br>  "HEAD",<br>  "OPTIONS",<br>  "PATCH",<br>  "POST",<br>  "PUT"<br>]</pre> | no |
 | <a name="input_cached_methods"></a> [cached\_methods](#input\_cached\_methods) | Cached methods. | `list(string)` | <pre>[<br>  "GET",<br>  "HEAD"<br>]</pre> | no |
 | <a name="input_compress"></a> [compress](#input\_compress) | Compress. | `bool` | `false` | no |
-| <a name="input_cookies_forward"></a> [cookies\_forward](#input\_cookies\_forward) | Cookies forward. | `string` | `"none"` | no |
 | <a name="input_custom_error_response"></a> [custom\_error\_response](#input\_custom\_error\_response) | (Optional)A mapping containing custom error response. | `map(string)` | `{}` | no |
 | <a name="input_default_root_object"></a> [default\_root\_object](#input\_default\_root\_object) | Default root object. | `string` | `"index.html"` | no |
 | <a name="input_domain_name"></a> [domain\_name](#input\_domain\_name) | Origin domain name. | `string` | n/a | yes |
 | <a name="input_enabled"></a> [enabled](#input\_enabled) | Enabled distribution | `bool` | `true` | no |
+| <a name="input_forward"></a> [forward](#input\_forward) | Cookies forward. | `string` | `"none"` | no |
 | <a name="input_http_version"></a> [http\_version](#input\_http\_version) | Http version. | `string` | `"http2"` | no |
 | <a name="input_is_ipv6_enabled"></a> [is\_ipv6\_enabled](#input\_is\_ipv6\_enabled) | Enabled ipv6. | `bool` | `false` | no |
+| <a name="input_lambda_function_association"></a> [lambda\_function\_association](#input\_lambda\_function\_association) | (Optional) Lambda function association. | <pre>list(object({<br>    event_type   = string<br>    include_body = bool<br>    lambda_arn   = string<br>  }))</pre> | `[]` | no |
 | <a name="input_origin_id"></a> [origin\_id](#input\_origin\_id) | Origin id. | `string` | n/a | yes |
 | <a name="input_price_class"></a> [price\_class](#input\_price\_class) | Price class of the distribution. | `string` | `"PriceClass_100"` | no |
 | <a name="input_query_string"></a> [query\_string](#input\_query\_string) | Query string. | `bool` | `false` | no |
