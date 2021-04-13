@@ -61,7 +61,7 @@ variable "query_string" {
   default     = false
 }
 
-variable "cookies_forward" {
+variable "forward" {
   description = "Cookies forward."
   type        = string
   default     = "none"
@@ -109,4 +109,14 @@ variable "tags" {
   description = "(Optional) A mapping of tags to assign to the bucket."
   type        = map(string)
   default     = {}
+}
+
+variable "lambda_function_association" {
+  description = "(Optional) Lambda function association."
+  type        = list(object({
+    event_type   = string
+    include_body = bool
+    lambda_arn   = string
+  }))
+  default     = []
 }

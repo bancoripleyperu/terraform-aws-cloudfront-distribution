@@ -5,4 +5,7 @@ Gemfile.lock
 .bundle/
 .terraform/
 terraform.tfstate.d/
+.terraform.tfstate.lock.info
+terraform.tfstate
+terraform.tfstate.backup
 Gemfile.lock
