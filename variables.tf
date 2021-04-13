@@ -92,9 +92,14 @@ variable "http_version" {
 }
 
 variable "custom_error_response" {
-  description = "(Optional)A mapping containing custom error response."
-  type        = map(string)
-  default     = {}
+  description = "(Optional) List of custom error response configurations for cloudFront distribution."
+  type = set(object({
+    error_code            = number
+    response_code         = number
+    response_page_path    = string
+    error_caching_min_ttl = number
+  }))
+  default = []
 }
 
 variable "viewer_certificate" {
@@ -112,7 +117,7 @@ variable "tags" {
 }
 
 variable "lambda_function_association" {
-  description = "(Optional) Lambda function association."
+  description = "(Optional) A mapping containing lambda function association."
   type = list(object({
     event_type   = string
     include_body = bool
